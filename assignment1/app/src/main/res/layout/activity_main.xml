@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<!--    //toolbar(title text)-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        />
+
+<!--    상단 메뉴 그룹 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+<!--        기본 정보 레이아웃-->
+        <LinearLayout
+            android:id="@+id/basic_information_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="이름: 전병천"
+                />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="학번: 201658073"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/android_class_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            android:text="안드로이드 프로그래밍 분반은?"
+            />
+
+<!--        라디오 그룹 레이아웃(A반 기본 선택)-->
+        <LinearLayout
+            android:id="@+id/class_information_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            >
+
+            <RadioGroup
+                android:id="@+id/android_class_radiogroup"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+<!--             라디오버튼 기본 활성화 상태 checked = "true", text는 strings.xml 사용-->
+                <RadioButton
+                    android:id="@+id/android_class_btn_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="@string/class_radio_A"
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:id="@+id/android_class_btn_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="@string/class_radio_B"
+                    />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/phone_information_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textSize="15dp"
+            android:text="사용하는 스마트폰은?"
+            />
+
+<!--        라디오 그룹 레이아웃(안드로이드 기본 선택)-->
+        <LinearLayout
+            android:id="@+id/phone_information_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            >
+
+            <RadioGroup
+                android:id="@+id/phone_information_radiogroup"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+<!--             라디오버튼 기본 활성화 상태(checked = "true"), text는 strings.xml 사용-->
+                <RadioButton
+                    android:id="@+id/phone_information_radio_android"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="@string/phone_radio_android"
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:id="@+id/phone_information_radio_iphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_radio_iphone"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!-- 하단 이미지 구역 전체 레이아웃-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--     imageview (높이 200dp, 이미지 경로 src지정, layout_gravity imageview 위지 조정)-->
+<!--     각각의 id를 MainActivity에 사용)-->
+        <ImageView
+            android:id="@+id/image_view1"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/image1"
+            />
+
+        <Button
+            android:id="@+id/image_view_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="다음 사진"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
